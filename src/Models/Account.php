@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Jrpikong\SmartAccounting\Models;
@@ -15,7 +16,7 @@ class Account extends Model
     protected $guarded = ['id'];
 
     protected $casts = [
-        'auto_approved' => 'boolean'
+        'auto_approved' => 'boolean',
     ];
 
     public function AccountGroup(): BelongsTo

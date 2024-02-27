@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Jrpikong\SmartAccounting\Models;
@@ -11,12 +12,11 @@ use Jrpikong\SmartAccounting\Enum\StatusFlow;
 
 class SubmissionFlow extends Model
 {
-
     protected $guarded = ['id'];
 
     protected $casts = [
         'title' => StatusFlow::class,
-        'type'  => AccountType::class
+        'type' => AccountType::class,
     ];
 
     public function user(): BelongsTo
