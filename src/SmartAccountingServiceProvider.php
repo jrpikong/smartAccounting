@@ -24,11 +24,6 @@ class SmartAccountingServiceProvider extends PackageServiceProvider
 
     public function configurePackage(Package $package): void
     {
-        /*
-         * This class is a Package Service Provider
-         *
-         * More info: https://github.com/spatie/laravel-package-tools
-         */
         $package->name(static::$name)
             ->hasCommands($this->getCommands())
             ->hasInstallCommand(function (InstallCommand $command) {
@@ -103,8 +98,8 @@ class SmartAccountingServiceProvider extends PackageServiceProvider
     {
         return [
             // AlpineComponent::make('smartaccounting', __DIR__ . '/../resources/dist/components/smartaccounting.js'),
-            Css::make('smartaccounting-styles', __DIR__.'/../resources/dist/smartaccounting.css'),
-            Js::make('smartaccounting-scripts', __DIR__.'/../resources/dist/smartaccounting.js'),
+            //            Css::make('smartaccounting-styles', __DIR__ . '/../resources/dist/smartaccounting.css'),
+            //            Js::make('smartaccounting-scripts', __DIR__ . '/../resources/dist/smartaccounting.js'),
         ];
     }
 
