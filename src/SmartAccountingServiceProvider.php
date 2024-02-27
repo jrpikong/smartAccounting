@@ -32,7 +32,7 @@ class SmartAccountingServiceProvider extends PackageServiceProvider
                     ->publishMigrations()
                     ->askToRunMigrations()
                     ->askToStarRepoOnGitHub('jrpikong/smartaccounting');
-            });
+            })->runsMigrations();
 
         $configFileName = $package->shortName();
 
