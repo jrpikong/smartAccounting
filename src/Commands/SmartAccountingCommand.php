@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Jrpikong\SmartAccounting\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class SmartAccountingCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'smartaccounting';
 
     public $description = 'My command';
 
