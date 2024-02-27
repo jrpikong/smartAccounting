@@ -9,12 +9,12 @@ use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
 use Filament\Support\Facades\FilamentIcon;
 use Illuminate\Filesystem\Filesystem;
+use Jrpikong\SmartAccounting\Commands\SmartAccountingCommand;
+use Jrpikong\SmartAccounting\Testing\TestsSmartAccounting;
 use Livewire\Features\SupportTesting\Testable;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Jrpikong\SmartAccounting\Commands\SmartAccountingCommand;
-use Jrpikong\SmartAccounting\Testing\TestsSmartAccounting;
 
 class SmartAccountingServiceProvider extends PackageServiceProvider
 {
@@ -80,7 +80,7 @@ class SmartAccountingServiceProvider extends PackageServiceProvider
 
         // Handle Stubs
         if (app()->runningInConsole()) {
-            foreach (app(Filesystem::class)->files(__DIR__ . '/../stubs/') as $file) {
+            foreach (app(Filesystem::class)->files(__DIR__.'/../stubs/') as $file) {
                 $this->publishes([
                     $file->getRealPath() => base_path("stubs/smartaccounting/{$file->getFilename()}"),
                 ], 'smartaccounting-stubs');
@@ -103,8 +103,8 @@ class SmartAccountingServiceProvider extends PackageServiceProvider
     {
         return [
             // AlpineComponent::make('smartaccounting', __DIR__ . '/../resources/dist/components/smartaccounting.js'),
-            Css::make('smartaccounting-styles', __DIR__ . '/../resources/dist/smartaccounting.css'),
-            Js::make('smartaccounting-scripts', __DIR__ . '/../resources/dist/smartaccounting.js'),
+            Css::make('smartaccounting-styles', __DIR__.'/../resources/dist/smartaccounting.css'),
+            Js::make('smartaccounting-scripts', __DIR__.'/../resources/dist/smartaccounting.js'),
         ];
     }
 
@@ -149,7 +149,7 @@ class SmartAccountingServiceProvider extends PackageServiceProvider
     {
         return [
             'create_account_groups_table',
-            'create_accounts_table'
+            'create_accounts_table',
         ];
     }
 }
