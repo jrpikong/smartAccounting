@@ -5,12 +5,10 @@ namespace Jrpikong\SmartAccounting\Enum;
 use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasLabel;
 
-enum AccountType: string implements HasLabel, HasColor
+enum AccountType: string implements HasColor, HasLabel
 {
-
     case ROUTINE_COST = 'ROUTINE COST';
-    case NON_ROUTINE_COST  = 'NON ROUTINE COST';
-
+    case NON_ROUTINE_COST = 'NON ROUTINE COST';
 
     public function getLabel(): ?string
     {

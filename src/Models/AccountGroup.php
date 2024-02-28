@@ -1,5 +1,7 @@
 <?php
+
 declare(strict_types=1);
+
 namespace Jrpikong\SmartAccounting\Models;
 
 use Illuminate\Database\Eloquent\Model;
@@ -13,9 +15,6 @@ class AccountGroup extends Model
 
     protected $guarded = ['id'];
 
-    /**
-     * @return HasMany
-     */
     public function account(): HasMany
     {
         return $this->hasMany(Account::class);

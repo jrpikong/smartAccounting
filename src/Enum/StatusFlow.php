@@ -5,9 +5,8 @@ namespace Jrpikong\SmartAccounting\Enum;
 use Filament\Support\Contracts\HasColor;
 use Filament\Support\Contracts\HasIcon;
 use Filament\Support\Contracts\HasLabel;
-use function Laravel\Prompts\select;
 
-enum StatusFlow: int implements HasLabel, HasColor, HasIcon
+enum StatusFlow: int implements HasColor, HasIcon, HasLabel
 {
     case STATUS_CREATED = 0;
     case STATUS_REVIEW = 1;
