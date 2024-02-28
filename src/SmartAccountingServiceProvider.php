@@ -143,8 +143,8 @@ class SmartAccountingServiceProvider extends PackageServiceProvider
     protected function getMigrations(): array
     {
         return [
-            'create_account_groups_table',
-            'create_accounts_table',
+            'tenant/create_account_groups_table',
+            'tenant/create_accounts_table',
         ];
     }
 }
